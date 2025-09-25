@@ -1,18 +1,64 @@
+import { useState } from "react";
+
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <div className="container-default section">
       <h1 className="text-3xl font-bold">Contact Us</h1>
       <div className="mt-6 grid md:grid-cols-2 gap-8">
-        <form className="space-y-4">
-          <input className="w-full border rounded p-3" placeholder="Name" />
-          <input className="w-full border rounded p-3" placeholder="Email" />
-          <textarea className="w-full border rounded p-3" rows="5" placeholder="Message or Prayer Request" />
-          <button type="button" className="btn-primary">Send</button>
-        </form>
+        {!submitted ? (
+          <form
+            action="https://formspree.io/f/xqayadjo"  // 👈 replace with your Formspree endpoint
+            method="POST"
+            onSubmit={() => setSubmitted(true)}
+            className="space-y-4"
+          >
+            <input
+              className="w-full border rounded p-3"
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              className="w-full border rounded p-3"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              className="w-full border rounded p-3"
+              rows="5"
+              name="message"
+              placeholder="Message or Prayer Request"
+              required
+            />
+            <button type="submit" className="btn-primary">
+              Send
+            </button>
+          </form>
+        ) : (
+          <div className="p-6 border rounded bg-green-50 text-green-700">
+            <h2 className="text-xl font-semibold">Thank you!</h2>
+            <p className="mt-2">
+              Your message or prayer request has been received. Someone from
+              St. John COGIC will reach out soon.
+            </p>
+          </div>
+        )}
+
         <div>
-          <p><strong>Address:</strong> 750 Bernard Street, Cocoa, FL 32922</p>
-          <p className="mt-2"><strong>Phone:</strong> (321) 636-0305</p>
-          <p className="mt-2"><strong>Email:</strong> stjohncogic750@gmail.com</p>
+          <p>
+            <strong>Address:</strong> 750 Bernard Street, Cocoa, FL 32922
+          </p>
+          <p className="mt-2">
+            <strong>Phone:</strong> (321) 636-0305
+          </p>
+          <p className="mt-2">
+            <strong>Email:</strong> stjohncogic750@gmail.com
+          </p>
           <div className="mt-4">
             <iframe
               title="map"
@@ -27,3 +73,4 @@ export default function Contact() {
     </div>
   );
 }
+

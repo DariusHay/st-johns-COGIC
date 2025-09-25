@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <section>
@@ -8,8 +10,8 @@ export default function Home() {
             “Living Hope for Real People… Igniting Faith, Inspiring Hope, and Impacting Lives”
           </p>
           <div className="mt-6 flex gap-3">
-            <a href="/contact" className="btn-primary">Plan Your Visit</a>
-            <a href="/sermons" className="btn-outline">Watch Sermons</a>
+            <Link to="/contact" className="btn-primary">Plan Your Visit</Link>
+            <Link to="/sermons" className="btn-outline">Watch Sermons</Link>
           </div>
         </div>
       </div>
