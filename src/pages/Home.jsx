@@ -52,7 +52,7 @@ export default function Home() {
           <div className="border rounded-xl p-6">
             <h3 className="font-semibold text-sjBlue">Location</h3>
             <p className="mt-2">750 Bernard Street, Cocoa, FL 32922</p>
-            <Link to="/contact" className="btn-outline mt-4" href="/contact">Get Directions</Link>
+            <Link to="/contact" className="btn-outline mt-4">Get Directions</Link>
           </div>
         </div>
       </div>
