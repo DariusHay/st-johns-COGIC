@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import logo from "../assets/church-logo.PNG";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -17,8 +18,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b">
       <nav className="container-default h-16 flex items-center justify-between">
-        <Link to="/" className="font-bold tracking-tight text-xl">
-          <span className="text-sjGold">St. John</span> COGIC
+        <Link to="/" className="flex items-center gap-2 font-bold tracking-tight text-xl">
+          <img src={logo} alt="St. John COGIC Logo" className="h-12 w-auto" />
+          <span className="hidden sm:inline text-sjGold">St. John</span> COGIC
         </Link>
         <button className="md:hidden p-2 border rounded" onClick={() => setOpen(!open)} aria-label="Toggle Menu">☰</button>
         <ul className="hidden md:flex gap-1">

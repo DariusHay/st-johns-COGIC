@@ -1,20 +1,40 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/church-logo.PNG";
 
 export default function Home() {
   return (
     <section>
-      <div className="section-dark">
-        <div className="container-default py-16">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">St. John Church of God In Christ</h1>
-          <p className="mt-4 text-lg max-w-3xl">
+      <div className="section-dark text-center">
+        <div className="container-default py-6">
+          {/* Logo */}
+          <img
+            src={logo}
+            alt="St. John COGIC Logo"
+            className="h-56 md:h-72 w-auto mx-auto mb-0"
+          />
+
+          {/* Church Name */}
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-3">
+            St. John Church of God In Christ
+          </h1>
+
+          {/* Tagline */}
+          <p className="text-lg max-w-3xl mx-auto mb-6">
             “Living Hope for Real People… Igniting Faith, Inspiring Hope, and Impacting Lives”
           </p>
-          <div className="mt-6 flex gap-3">
-            <Link to="/contact" className="btn-primary">Plan Your Visit</Link>
-            <Link to="/sermons" className="btn-outline">Watch Sermons</Link>
+
+          {/* Buttons */}
+          <div className="flex gap-3 justify-center mb-20">
+            <Link to="/contact" className="btn-primary">
+              Plan Your Visit
+            </Link>
+            <Link to="/sermons" className="btn-outline font-semibold">
+              Watch Sermons
+            </Link>
           </div>
         </div>
       </div>
+
 
       <div className="container-default section">
         <div className="grid md:grid-cols-3 gap-6">

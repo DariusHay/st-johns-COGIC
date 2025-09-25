@@ -12,6 +12,11 @@ body { @apply bg-[var(--bg)] text-[var(--fg)]; }
 .container-default { @apply max-w-6xl mx-auto px-4; }
 
 .btn-primary { @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium bg-sjBlue text-white hover:opacity-90; }
-.btn-outline { @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium border border-sjBlue text-sjBlue hover:bg-sjBlue hover:text-white; }
+.btn-outline {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium 
+    border border-sjGold text-sjGold 
+    hover:bg-sjGold hover:text-white;
+}
+
 .section { @apply py-12; }
 .section-dark { @apply bg-sjNavy text-white; }
