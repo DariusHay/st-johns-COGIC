@@ -4,19 +4,38 @@
 
 :root {
   --bg: #ffffff;
-  --fg: #0f172a;
+  --fg: #0d0e10;
 }
 
-body { @apply bg-[var(--bg)] text-[var(--fg)]; }
-
-.container-default { @apply max-w-6xl mx-auto px-4; }
-
-.btn-primary { @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium bg-sjBlue text-white hover:opacity-90; }
-.btn-outline {
-  @apply inline-flex items-center justify-center px-4 py-2 rounded font-medium 
-    border border-sjGold text-sjGold 
-    hover:bg-sjGold hover:text-white;
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+.container-default {
+  max-width: 72rem; /* max-w-6xl */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
 }
 
+/* Brand sections */
 .section { @apply py-12; }
-.section-dark { @apply bg-sjNavy text-white; }
+.section-tight { @apply py-6; }
+.section-hero {
+  @apply text-white bg-gradient-to-br from-sjBurgundy to-sjMaroon;
+}
+
+/* Cards */
+.card { @apply bg-white rounded-2xl shadow-sm border overflow-hidden; }
+.card-img { @apply w-full h-48 object-cover; }
+
+/* Buttons */
+.btn { @apply inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-semibold transition; }
+.btn-gold { @apply btn bg-sjGold text-sjInk hover:bg-sjGoldDeep; }
+.btn-ghost-light { @apply btn border border-white/70 text-white hover:bg-white hover:text-sjInk; }
+
+/* Headings */
+.h-eyebrow { @apply uppercase tracking-widest text-sm text-sjGold font-semibold; }
+.h-hero { @apply text-3xl md:text-5xl font-extrabold tracking-tight; }
+.h-section { @apply text-2xl md:text-3xl font-bold; }
