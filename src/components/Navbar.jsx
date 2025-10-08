@@ -8,6 +8,7 @@ const nav = [
   { to: "/beliefs", label: "What We Believe" },
   // { to: "/ministries", label: "Ministries" },
   { to: "/events", label: "Events" },
+  { to: "/leaders", label: "Our Leaders" },
   // { to: "/sermons", label: "Sermons" },
   { to: "/giving", label: "Giving" },
   { to: "/contact", label: "Contact" },

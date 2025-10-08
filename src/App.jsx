@@ -12,6 +12,7 @@ import Sermons from "./pages/Sermons.jsx";
 import Giving from "./pages/Giving.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Leaders from "./pages/Leaders.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/beliefs" element={<Beliefs />} />
           <Route path="/ministries" element={<Ministries />} />
+          <Route path="/leaders" element={<Leaders />} />
           <Route path="/events" element={<Events />} />
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/giving" element={<Giving />} />

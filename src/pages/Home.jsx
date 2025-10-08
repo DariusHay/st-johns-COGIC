@@ -1,91 +1,136 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import HeroSlideshow from "../components/HeroSlideshow";
 import logo from "../assets/church-logo.PNG"; // rename lowercase or use ?url
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
+import hero5 from "../assets/hero5.png";
+import hero6 from "../assets/hero6.png";
+import hero7 from "../assets/hero7.png";
+import hero8 from "../assets/hero8.png";
+import hero9 from "../assets/hero9.png";
+import hero10 from "../assets/hero10.png";
+import hero11 from "../assets/hero11.png";
+import hero12 from "../assets/hero12.png";
+import hero13 from "../assets/hero13.png";
+import hero14 from "../assets/hero14.png";
+import hero15 from "../assets/hero15.png";
+// Hero images (can be local or remote URLs)
 
 const HERO_SRC =
   "https://unsplash.com/photos/jBI220z-cU4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8U2FsdmF0aW9ufGVufDB8fHx8MTc1OTM0NzIyM3ww&force=true";
+
+const HERO_IMAGES = [
+  { src: hero1, pos: "center 5%" }, // default starting point
+  { src: hero2, pos: "20% 30%", zoom: 1.5 },
+  // { src: hero3, pos: "center 20%" },
+  // { src: hero4, pos: "0% 10%", zoom: 1.8 },
+  { src: hero5, pos: "center 20%" },
+  { src: hero6, pos: "center 30%" },
+  // { src: hero7, pos: "20% 26%" }, IDK
+  { src: hero8, pos: "center 34%" },
+  { src: hero9, pos: "center 15%" },
+  { src: hero10, pos: "center 20%" },
+  { src: hero11, pos: "center 30%" },
+  { src: hero12, pos: "center 33%" },
+  // { src: hero13, pos: "center 50%" }, IDK
+  { src: hero14, pos: "center 40%" },
+  // { src: hero15, pos: "center 50%" }, IDK
+  // 💡 Replace these with the images the Pastor sent (you can import local images too)
+  // "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
+  // "https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?q=80&w=1600&auto=format&fit=crop",
+  // "https://images.unsplash.com/photo-1524503033411-c9566986fc8f?q=80&w=1600&auto=format&fit=crop",
+];
 
 export default function Home() {
   const [ready, setReady] = useState(false);
 
   return (
     <>
-      {/* HERO */}
-      <section
-        className="relative text-white"
-        style={{
-          backgroundImage: `url('${HERO_SRC}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.8, ease: "easeOut" }} // smooth fade-in
       >
-        {/* Preload image and start animations when loaded */}
-        <img
-          src={HERO_SRC}
-          alt=""
-          aria-hidden="true"
-          className="hidden"
-          loading="eager"
-          decoding="async"
-          onLoad={() => setReady(true)}
-        />
-
-        {/* Maroon glaze */}
-        <div className="absolute inset-0 bg-sjMaroon/80" />
-
-        {/* Content */}
-        <div className="relative container-default min-h-[60vh] flex flex-col items-center justify-center py-16 text-center">
-          {/* Logo */}
+        <HeroSlideshow
+          images={HERO_IMAGES}
+          interval={6000}
+          overlayOpacityClass="bg-sjMaroon/60"
+          className="text-center"
+        >
+          {/* Preload image and start animations when loaded */}
           <img
-            src={logo}
-            alt="St. John COGIC Logo"
-            className={
-              "h-56 md:h-72 w-auto mb-3 transition-all duration-1000 " +
-              (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
-            }
-            style={{ transitionDelay: "0ms" }} // immediately after image loads
+            src={HERO_SRC}
+            alt=""
+            aria-hidden="true"
+            className="hidden"
+            loading="eager"
+            decoding="async"
+            onLoad={() => setReady(true)}
           />
 
-          {/* Title */}
-          <h1
-            className={
-              "h-hero transition-all duration-1000 " +
-              (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
-            }
-            style={{ transitionDelay: "600ms" }} // wait 1s after logo
-          >
-            St. John Church of God In Christ
-          </h1>
+          {/* Maroon glaze */}
+          <div className="absolute inset-0 bg-sjMaroon/52" />
 
-          {/* Tagline */}
-          <p
-            className={
-              "mt-2 text-lg max-w-3xl mx-auto transition-all duration-1000 transform " +
-              (ready
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-3")
-            }
-            style={{ transitionDelay: "1000ms" }}
-          >
-            “Living Hope for Real People… Igniting Faith, Inspiring Hope, and Impacting Lives”
-          </p>
+          {/* Content */}
+          <div className="relative container-default min-h-[60vh] flex flex-col items-center justify-center py-6 text-center">
+
+            {/* Logo */}
+            <img
+              src={logo}
+              alt="St. John COGIC Logo"
+              className={
+                "h-60 md:h-[18rem] w-auto mb-5 transition-all duration-1000 " +
+                (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
+              }
+            />
 
 
-          {/* Buttons */}
-          <div
-            className={
-              "mt-6 flex gap-3 justify-center transition-all duration-1000 " +
-              (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2")
-            }
-            style={{ transitionDelay: "2000ms" }} // wait 1.2s after tagline
-          >
-            <Link to="/contact" className="btn-gold">Plan Your Visit</Link>
-            
+
+
+            {/* Title */}
+            <h1
+              className={
+                "h-hero transition-all duration-1000 " +
+                (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
+              }
+              style={{ transitionDelay: "600ms" }} // wait 1s after logo
+            >
+              St. John Church of God In Christ
+            </h1>
+
+            {/* Tagline */}
+            <p
+              className={
+                "mt-2 text-lg max-w-3xl mx-auto transition-all duration-1000 transform " +
+                (ready
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-3")
+              }
+              style={{ transitionDelay: "1000ms" }}
+            >
+              “Living Hope for Real People… Igniting Faith, Inspiring Hope, and Impacting Lives”
+            </p>
+
+
+            {/* Buttons */}
+            <div
+              className={
+                "mt-6 flex gap-3 justify-center transition-all duration-1000 " +
+                (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2")
+              }
+              style={{ transitionDelay: "2000ms", marginBottom: 30 }} // wait 1.2s after tagline
+            >
+              <Link to="/contact" className="btn-gold">Plan Your Visit</Link>
+
+            </div>
+
           </div>
-
-        </div>
-      </section>
+        </HeroSlideshow>
+      </motion.div>
 
       {/* FEATURED CARDS */}
       <motion.div
@@ -155,6 +200,33 @@ export default function Home() {
           </div>
         </div>
       </motion.div>
+
+      <section className="container-default section">
+        <div className="text-center mb-6">
+          <div className="h-eyebrow">Our Leaders</div>
+          <h2 className="h-section text-sjBurgundy">Superintendent T. Reaves, Sr. & Lady Robin Reaves</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 items-center">
+          <div className="md:col-span-1">
+            <img
+              src={hero2}
+              alt="Superintendent T. Reaves, Sr. & Lady Robin Reaves"
+              className="w-full rounded-2xl shadow border object-cover h-72"
+              style={{ objectPosition: "center 30%" }}
+            />
+          </div>
+          <div className="md:col-span-2">
+            <p className="text-slate-700">
+              We are blessed to be led by Superintendent T. Reaves, Sr. and First Lady Robin Reaves.
+              Their heart for God and love for people guide St. John COGIC in worship, service, and community impact.
+            </p>
+            <div className="mt-4">
+              <Link to="/leaders" className="btn-gold">Read Their Bio</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* GOLD CTA BANNER */}
       <div className="bg-sjGold">

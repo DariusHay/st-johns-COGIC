@@ -13,11 +13,11 @@ export default function About() {
       <div className="container-default section grid md:grid-cols-3 gap-8">
         <div className="md:col-span-2">
           {/* Mission & Vision (keep your existing copy) */}
-          <h2 className="h-section text-sjBurgundy">Our Mission</h2>
-          <p className="mt-2 text-slate-700">To nurture a caring and Spirit-filled environment where every individual is valued, empowered, and equipped to serve God and others. We are dedicated to fostering spiritual growth, outreach, and unity in Christ, demonstrating love through action and prayer.</p>
-
-          <h2 className="h-section text-sjBurgundy mt-8">Our Vision</h2>
+          <h2 className="h-section text-sjBurgundy">Our Vision</h2>
           <p className="mt-2 text-slate-700">Empowered by the Holy Spirit, we are a vibrant, loving church committed to transforming lives through faith, worship, and service—bringing hope and salvation to our community and beyond.</p>
+
+          <h2 className="h-section text-sjBurgundy mt-8">Our Mission</h2>
+          <p className="mt-2 text-slate-700">To nurture a caring and Spirit-filled environment where every individual is valued, empowered, and equipped to serve God and others. We are dedicated to fostering spiritual growth, outreach, and unity in Christ, demonstrating love through action and prayer.</p>
         </div>
         <div className="card overflow-hidden relative">
           <img
@@ -27,7 +27,7 @@ export default function About() {
           />
           <div className="absolute bottom-0 w-full bg-sjGold/90 text-sjInk py-3">
             <p className="text-center font-semibold">
-              Serving Cocoa, FL for over 100 years
+              Serving Cocoa, FL and surrounding communities for over 100 years
             </p>
           </div>
         </div>
