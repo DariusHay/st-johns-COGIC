@@ -83,7 +83,7 @@ export default function Home() {
               src={logo}
               alt="St. John COGIC Logo"
               className={
-                "h-60 md:h-[18rem] w-auto mb-5 transition-all duration-1000 " +
+                "h-28 sm:h-32 md:h-[18rem] w-auto mb-5 transition-all duration-1000 " +
                 (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
               }
             />
