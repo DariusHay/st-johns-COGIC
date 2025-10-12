@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import HeroSlideshow from "../components/HeroSlideshow";
@@ -24,24 +24,22 @@ import church from "../assets/church.jpg";
 const HERO_SRC =
   "https://unsplash.com/photos/jBI220z-cU4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8U2FsdmF0aW9ufGVufDB8fHx8MTc1OTM0NzIyM3ww&force=true";
 
-const HERO_INTERVAL = 6000;
-
 const HERO_IMAGES = [
   { src: HERO_SRC, pos: "0% 20%" }, // default starting point
-  { src: hero1, pos: "center 0%", zoom: 1 }, // default starting point
-  { src: hero2, pos: "20% 21%", zoom: 1 },
+  { src: hero1, pos: "center 0%", zoom: 1}, // default starting point
+  // { src: hero2, pos: "20% 21.2%", zoom: 1 },
   // { src: hero3, pos: "center 20%" }, IDK
   // { src: hero4, pos: "0% 10%", zoom: 1.8 }, IDK
-  { src: hero5, pos: "center 5%" },
+  // { src: hero5, pos: "center 5%" },
   { src: church, pos: "20% 20%", zoom: 2 },
-  { src: hero6, pos: "center 25%" },
+  // { src: hero6, pos: "center 25%" },
   // { src: hero7, pos: "20% 26%" }, IDK
   // { src: hero8, pos: "center 34%" }, IDK
   // { src: hero9, pos: "center 15%" }, IDK
   // { src: hero10, pos: "center 20%" }, IDK
-  // { src: hero11, pos: "center 20%" },
-  { src: hero12, pos: "center 30%" },
-  // { src: hero13, pos: "center 50%" }, 
+  { src: hero11, pos: "center 20%" },
+  { src: hero12, pos: "center 33%", zoom: 0.2 },
+  // { src: hero13, pos: "center 50%" }, IDK
   // { src: hero14, pos: "center 40%" }, IDK
   // { src: hero15, pos: "center 50%" }, IDK
   // 💡 Replace these with the images the Pastor sent (you can import local images too)
@@ -52,12 +50,6 @@ const HERO_IMAGES = [
 
 export default function Home() {
   const [ready, setReady] = useState(false);
-  const [dockLogo, setDockLogo] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setDockLogo(true), Math.max(0, HERO_INTERVAL - 300));
-    return () => clearTimeout(t);
-  }, []);
 
   return (
     <>
@@ -98,19 +90,6 @@ export default function Home() {
                 (ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3")
               }
             />
-
-            {/* <img
-              src={logo}
-              alt="St. John COGIC Logo"
-              className={[
-                "absolute z-10 transition-all duration-700 ease-out",
-                // Start centered and same size as your original static logo (h-28 sm:h-32 md:h-[18rem])
-                dockLogo
-                  ? "top-4 left-4 h-24 sm:h-28 md:h-32 translate-x-0 translate-y-0"
-                  : "top-1/2 left-1/2 h-28 sm:h-32 md:h-[18rem] -translate-x-1/2 -translate-y-1/2",
-                ready ? "opacity-100" : "opacity-0",
-              ].join(" ")}
-            /> */}
 
 
 

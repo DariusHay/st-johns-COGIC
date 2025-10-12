@@ -27,7 +27,7 @@ export default function About() {
           />
           <div className="absolute bottom-0 w-full bg-sjGold/90 text-sjInk py-3">
             <p className="text-center font-semibold">
-              Serving Cocoa, FL and surrounding communities for over 100 years
+              Serving Cocoa, FL and surrounding communities
             </p>
           </div>
         </div>
