@@ -27,28 +27,58 @@ const HERO_SRC =
 const HERO_INTERVAL = 6000;
 
 const HERO_IMAGES = [
-  { src: HERO_SRC, pos: "0% 20%" }, // default starting point
-  { src: hero1, pos: "center 0%", zoom: 1 }, // default starting point
-  { src: hero2, pos: "20% 21%", zoom: 1 },
-  // { src: hero3, pos: "center 20%" }, IDK
-  // { src: hero4, pos: "0% 10%", zoom: 1.8 }, IDK
-  { src: hero5, pos: "center 5%" },
-  { src: church, pos: "20% 20%", zoom: 2 },
-  { src: hero6, pos: "center 25%" },
-  // { src: hero7, pos: "20% 26%" }, IDK
-  // { src: hero8, pos: "center 34%" }, IDK
-  // { src: hero9, pos: "center 15%" }, IDK
-  // { src: hero10, pos: "center 20%" }, IDK
-  // { src: hero11, pos: "center 20%" },
-  { src: hero12, pos: "center 30%" },
-  // { src: hero13, pos: "center 50%" }, 
-  // { src: hero14, pos: "center 40%" }, IDK
-  // { src: hero15, pos: "center 50%" }, IDK
-  // 💡 Replace these with the images the Pastor sent (you can import local images too)
-  // "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
-  // "https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?q=80&w=1600&auto=format&fit=crop",
-  // "https://images.unsplash.com/photo-1524503033411-c9566986fc8f?q=80&w=1600&auto=format&fit=crop",
+  {
+    src: HERO_SRC,
+    pos: "0% 20%",
+    mobilePos: "90% 40%",
+    zoom: 1.1,
+    motion: "rl",   // left → right
+  },
+  {
+    src: hero1,
+    pos: "center 0%",
+    mobilePos: "center 0%",
+    zoom: 1.1,
+    motion: "tb",   // top → bottom
+  },
+  {
+    src: hero11,
+    pos: "20% 0%",
+    mobilePos: "0% 0%",
+    zoom: 1.4,
+    motion: "bt",   // right → left
+  },
+  {
+    src: hero5,
+    pos: "center 5%",
+    mobilePos: "80% 0%",
+    zoom: 1.2,
+    motion: "tb",   // bottom → top
+  },
+  {
+    src: church,
+    pos: "20% 20%",
+    mobilePos: "60% 45%",
+    zoom: 2.0,
+    motion: "lr",   // left → right
+  },
+  {
+    src: hero6,
+    pos: "center 20%",
+    mobilePos: "center 40%",
+    zoom: 1.2,
+    motion: "tb",   // top → bottom
+  },
+  {
+    src: hero12,
+    pos: "80% 30%",
+    mobilePos: "center 35%",
+    zoom: 1.1,
+    motion: "bt",   // right → left
+  }
 ];
+
+
 
 export default function Home() {
   const [ready, setReady] = useState(false);

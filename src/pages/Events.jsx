@@ -1,4 +1,10 @@
+import flyer from "../assets/events/family-friends-day.jpg";
+import { useState } from "react";
+
 export default function Events() {
+
+  const [showFlyer, setShowFlyer] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -40,27 +46,63 @@ export default function Events() {
 
         {/* Special Events */}
         <h2 className="mt-8 text-xl font-semibold text-sjBurgundy">Special Events</h2>
-        <p className="mt-2 text-slate-700">None at this time</p>
+        {/* Family & Friends Day */}
+      <div className="mt-4 grid md:grid-cols-3 gap-6 items-start">
+        {/* Flyer (replace src with your flyer image path when ready) */}
+        {/* Flyer (clickable) */}
+        <div className="md:col-span-1">
+          <div
+            className="card overflow-hidden cursor-pointer hover:opacity-90 transition"
+            onClick={() => setShowFlyer(true)}
+          >
+            <div className="aspect-[4/5] bg-slate-100">
+              <img
+                src={flyer}
+                alt="Family & Friends Day Flyer"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
 
-        {/* Upcoming Events Placeholder */}
-        <div className="mt-12 text-center">
-          <h2 className="h-section text-sjBurgundy">Upcoming Events</h2>
-          <p className="mt-3 text-slate-700">
-            We have exciting events planned for the future! Please check back
-            soon for updates, or join us for our weekly services and Bible
-            studies.
-          </p>
-          <div className="mt-6 border border-dashed border-sjGold rounded-xl py-8 px-6 bg-sjCream/40">
-            <p className="text-sjMaroon font-semibold">
-              📅 No upcoming events at this time
-            </p>
-            <p className="text-slate-600 text-sm mt-2">
-              Stay connected for announcements and new opportunities to
-              fellowship together.
-            </p>
+        {/* Details */}
+        <div className="md:col-span-2">
+          <div className="card">
+            <div className="p-5">
+              <div className="h-eyebrow">Special Service</div>
+              <h3 className="font-bold text-2xl mt-1 text-sjBurgundy">Family &amp; Friends Day</h3>
+              <ul className="mt-3 space-y-2 text-slate-700">
+                <li><strong>Date:</strong> Sunday, November 16, 2025</li>
+                <li><strong>Time:</strong> 3:00 PM</li>
+                <li><strong>Location:</strong> St. John COGIC — 750 Bernard Street, Cocoa, FL 32922</li>
+              </ul>
+              <p className="mt-4 text-slate-700">
+                We’d love to celebrate with you—bring your family and invite a friend!
+              </p>
+            </div>
           </div>
         </div>
       </div>
+      </div>
+      {/* Flyer Lightbox Modal */}
+      {showFlyer && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setShowFlyer(false)}
+        >
+          <img
+            src={flyer}
+            alt="Family & Friends Day Flyer"
+            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg object-contain"
+          />
+          <button
+            onClick={() => setShowFlyer(false)}
+            className="absolute top-4 right-4 text-white text-3xl font-bold"
+          >
+            ×
+          </button>
+        </div>
+      )}
     </>
   );
 }

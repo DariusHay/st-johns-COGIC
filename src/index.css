@@ -39,3 +39,44 @@ body {
 .h-eyebrow { @apply uppercase tracking-widest text-sm text-sjGold font-semibold; }
 .h-hero { @apply text-3xl md:text-5xl font-extrabold tracking-tight; }
 .h-section { @apply text-2xl md:text-3xl font-bold; }
+
+/* Ken Burns pan/zoom */
+@keyframes kb-pan-x {
+  from { transform: var(--kb-scale,1.1) translateX(var(--kb-x-from,-3%)) translateY(var(--kb-y-from,0)); }
+  to   { transform: var(--kb-scale,1.1) translateX(var(--kb-x-to,  3%)) translateY(var(--kb-y-to,  0)); }
+}
+@keyframes kb-pan-y {
+  from { transform: var(--kb-scale,1.1) translateX(var(--kb-x-from,0)) translateY(var(--kb-y-from,-3%)); }
+  to   { transform: var(--kb-scale,1.1) translateX(var(--kb-x-to,  0)) translateY(var(--kb-y-to,  3%)); }
+}
+
+/* Disable motion if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .kb-animate { animation: none !important; transform: none !important; }
+}
+
+.kb-animate {
+  will-change: transform;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+.kb-x { animation-name: kb-pan-x; }
+.kb-y { animation-name: kb-pan-y; }
+@keyframes kb-pan-x {
+  from { transform: var(--kb-scale,1.1) translateX(var(--kb-x-from,-4%)) translateY(var(--kb-y-from,0)); }
+  to   { transform: var(--kb-scale,1.1) translateX(var(--kb-x-to,  4%)) translateY(var(--kb-y-to,  0)); }
+}
+@keyframes kb-pan-y {
+  from { transform: var(--kb-scale,1.1) translateX(var(--kb-x-from,0)) translateY(var(--kb-y-from,-4%)); }
+  to   { transform: var(--kb-scale,1.1) translateX(var(--kb-x-to,  0)) translateY(var(--kb-y-to,  4%)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kb-animate { animation: none !important; transform: none !important; }
+}
+
+.kb-animate {
+  will-change: transform;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}

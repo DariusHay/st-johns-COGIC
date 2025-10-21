@@ -1,0 +1,12 @@
+name = "stjohn-contact"
+main = "src/worker.js"         # 👈 this is the entry-point Wrangler needs
+compatibility_date = "2025-01-01"
+
+# If you only want a workers.dev URL (no custom domain), keep this file as-is.
+# After deploy, Wrangler will print a URL like:
+# https://stjohn-contact.<yourname>.workers.dev
+
+# If later you want to bind a route on your own domain, add:
+# routes = [
+#   { pattern = "contact.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]

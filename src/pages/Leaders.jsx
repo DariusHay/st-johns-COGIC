@@ -18,12 +18,12 @@ export default function Leaders() {
         <div className="lg:col-span-2">
           <h2 className="h-section text-sjBurgundy">Biography</h2>
           <p className="mt-3 text-slate-700">
-            [Placeholder] Superintendent T. Reaves, Sr. has faithfully served the people of Cocoa, FL for decades,
+            Superintendent T. Reaves, Sr. has faithfully served the people of God for decades,
             ministering the Gospel of Jesus Christ with integrity, humility, and power. Under his leadership, St. John
             COGIC continues to grow as a worshiping, praying, and mission-minded church.
           </p>
           <p className="mt-3 text-slate-700">
-            [Placeholder] First Lady Robin Reaves is a compassionate leader who supports families, encourages the next
+            First Lady Robin Reaves is a compassionate leader who supports families, encourages the next
             generation, and models a life of prayer and service. Together, they serve as a powerful team for the glory
             of God.
           </p>
