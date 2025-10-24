@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { BookOpen } from "lucide-react";
 import HeroSlideshow from "../components/HeroSlideshow";
 import logo from "../assets/church-logo.PNG"; // rename lowercase or use ?url
 import hero1 from "../assets/hero1.png";
@@ -186,6 +187,18 @@ export default function Home() {
         </HeroSlideshow>
       </motion.div>
 
+      {/* 👇 ADD THIS BIBLE LINK SECTION 👇 */}
+      <div className="flex items-center justify-center gap-2 mt-6">
+        <a
+          href="https://www.biblegateway.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 text-sjBurgundy hover:text-sjBlue transition-all duration-200 text-lg font-semibold"
+        >
+          <BookOpen size={22} />
+          <span className="underline">Read the Bible Now</span>
+        </a>
+      </div>
       {/* FEATURED CARDS */}
       <motion.div
         className="container-default section"

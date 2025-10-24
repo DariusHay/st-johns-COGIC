@@ -1,5 +1,6 @@
 import flyer from "../assets/events/family-friends-day.jpg";
 import { useState } from "react";
+import { BookOpen } from "lucide-react";
 
 export default function Events() {
 
@@ -13,6 +14,19 @@ export default function Events() {
           <div className="h-eyebrow">Church Calendar</div>
           <h1 className="h-hero">Events</h1>
         </div>
+      </div>
+
+      {/* 👇 ADD THIS BIBLE LINK SECTION 👇 */}
+      <div className="flex items-center justify-center gap-2 mt-4">
+        <a
+          href="https://www.biblegateway.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 text-sjBurgundy hover:text-sjBlue transition-all duration-200 text-lg font-semibold"
+        >
+          <BookOpen size={22} />
+          <span className="underline">Read the Bible Now</span>
+        </a>
       </div>
 
       {/* Content Section */}
@@ -47,42 +61,45 @@ export default function Events() {
         {/* Special Events */}
         <h2 className="mt-8 text-xl font-semibold text-sjBurgundy">Special Events</h2>
         {/* Family & Friends Day */}
-      <div className="mt-4 grid md:grid-cols-3 gap-6 items-start">
-        {/* Flyer (replace src with your flyer image path when ready) */}
-        {/* Flyer (clickable) */}
-        <div className="md:col-span-1">
-          <div
-            className="card overflow-hidden cursor-pointer hover:opacity-90 transition"
-            onClick={() => setShowFlyer(true)}
-          >
-            <div className="aspect-[4/5] bg-slate-100">
-              <img
-                src={flyer}
-                alt="Family & Friends Day Flyer"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Details */}
-        <div className="md:col-span-2">
-          <div className="card">
-            <div className="p-5">
-              <div className="h-eyebrow">Special Service</div>
-              <h3 className="font-bold text-2xl mt-1 text-sjBurgundy">Family &amp; Friends Day</h3>
-              <ul className="mt-3 space-y-2 text-slate-700">
-                <li><strong>Date:</strong> Sunday, November 16, 2025</li>
-                <li><strong>Time:</strong> 3:00 PM</li>
-                <li><strong>Location:</strong> St. John COGIC — 750 Bernard Street, Cocoa, FL 32922</li>
-              </ul>
-              <p className="mt-4 text-slate-700">
-                We’d love to celebrate with you—bring your family and invite a friend!
+        <div className="mt-4 grid md:grid-cols-3 gap-6 items-start">
+          {/* Flyer (replace src with your flyer image path when ready) */}
+          {/* Flyer (clickable) */}
+          <div className="md:col-span-1">
+            <div
+              className="card overflow-hidden cursor-pointer hover:opacity-90 transition"
+              onClick={() => setShowFlyer(true)}
+            >
+              <div className="aspect-[4/5] bg-slate-100 text-center">
+                <img
+                  src={flyer}
+                  alt="Family & Friends Day Flyer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-sm text-slate-600 mt-2 italic text-center">
+                Click to enlarge
               </p>
             </div>
           </div>
+
+          {/* Details */}
+          <div className="md:col-span-2">
+            <div className="card">
+              <div className="p-5">
+                <div className="h-eyebrow">Special Service</div>
+                <h3 className="font-bold text-2xl mt-1 text-sjBurgundy">Family &amp; Friends Day</h3>
+                <ul className="mt-3 space-y-2 text-slate-700">
+                  <li><strong>Date:</strong> Sunday, November 16, 2025</li>
+                  <li><strong>Time:</strong> 3:00 PM</li>
+                  <li><strong>Location:</strong> St. John COGIC — 750 Bernard Street, Cocoa, FL 32922</li>
+                </ul>
+                <p className="mt-4 text-slate-700">
+                  We’d love to celebrate with you—bring your family and invite a friend!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
       {/* Flyer Lightbox Modal */}
       {showFlyer && (
