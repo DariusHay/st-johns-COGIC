@@ -90,7 +90,7 @@ export default function Contact() {
 
             <p className="text-xs text-slate-500">
               Prefer email?{" "}
-              <a className="underline" href="mailto:stjohncogic750@gmail.com">stjohncogic750@gmail.com</a>
+              <a className="underline" href="mailto:stjohncocoa@pm.me">stjohncocoa@pm.me</a>
             </p>
           </form>
         </div>
@@ -101,7 +101,7 @@ export default function Contact() {
           <p className="mt-2"><strong>Phone:</strong> (321) 636-0305</p>
           <p className="mt-2">
             <strong>Email:</strong>{" "}
-            <a className="underline" href="mailto:stjohncogic750@gmail.com">stjohncogic750@gmail.com</a>
+            <a className="underline" href="mailto:stjohncocoa@pm.me">stjohncocoa@pm.me</a>
           </p>
           <div className="mt-4">
             <iframe
