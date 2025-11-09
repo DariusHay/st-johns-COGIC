@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 import HeroSlideshow from "../components/HeroSlideshow";
-import logo from "../assets/church-logo.PNG"; // rename lowercase or use ?url
+import logo from "../assets/church-logo copy.png"; // rename lowercase or use ?url
 import hero1 from "../assets/Hero1.png";
 import hero2 from "../assets/Hero2.png";
 import hero3 from "../assets/Hero3.png";
