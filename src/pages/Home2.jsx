@@ -207,7 +207,7 @@ export default function Home() {
       <section className="container-default section">
         <div className="text-center mb-6">
           <div className="h-eyebrow">Our Leaders</div>
-          <h2 className="h-section text-sjBurgundy">Superintendent T. Reaves, Sr. & Lady Robin Reaves</h2>
+          <h2 className="h-section text-sjBurgundy">Supt. Terrance Reaves, Sr. & Lady Robin Reaves</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 items-center">

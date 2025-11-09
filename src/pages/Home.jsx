@@ -271,7 +271,7 @@ export default function Home() {
       <section className="container-default section">
         <div className="text-center mb-6">
           <div className="h-eyebrow">Our Leaders</div>
-          <h2 className="h-section text-sjBurgundy">Superintendent T. Reaves, Sr. & Lady Robin Reaves</h2>
+          <h2 className="h-section text-sjBurgundy">Superintendant Terrance Reaves, Sr. & Lady Robin Reaves</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 items-center">
@@ -285,7 +285,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-2">
             <p className="text-slate-700">
-              We are blessed to be led by Superintendent T. Reaves, Sr. and First Lady Robin Reaves.
+              We are blessed to be led by Supt. Terrance Reaves, Sr. and First Lady Robin Reaves.
               Their heart for God and love for people guide St. John COGIC in worship, service, and community impact.
             </p>
             <div className="mt-4">

@@ -8,7 +8,7 @@ export default function Leaders() {
       <div className="section-hero">
         <div className="container-default py-8 text-center">
           <div className="h-eyebrow">Our Leaders</div>
-          <h1 className="h-hero">Superintendent T. Reaves, Sr. & Lady Robin Reaves</h1>
+          <h1 className="h-hero">Superintendent Terrance Reaves, Sr. & Lady Robin Reaves</h1>
         </div>
       </div>
 
@@ -18,7 +18,7 @@ export default function Leaders() {
         <div className="lg:col-span-2">
           <h2 className="h-section text-sjBurgundy">Biography</h2>
           <p className="mt-3 text-slate-700">
-            Superintendent T. Reaves, Sr. has faithfully served the people of God for decades,
+            Supt. Terrance Reaves, Sr. has faithfully served the people of God for decades,
             ministering the Gospel of Jesus Christ with integrity, humility, and power. Under his leadership, St. John
             COGIC continues to grow as a worshiping, praying, and mission-minded church.
           </p>
