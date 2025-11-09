@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../assets/church-logo.PNG"; // rename lowercase or use ?url
+import logo from "../assets/church-logo copy.png"; // rename lowercase or use ?url
 
 const nav = [
   { to: "/", label: "Home" },

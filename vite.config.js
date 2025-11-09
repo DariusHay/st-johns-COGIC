@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/https://stjohncogiccocoa.org",  // 👈 must match your GitHub repo name
+  // base: "/https://stjohncogiccocoa.org", 
+  base: "/",  // 👈 must match your GitHub repo name
   assetsInclude: ["**/*.PNG", "**/*.JPG", "**/*.JPEG", "**/*.SVG"],
   server: {
     proxy: {
