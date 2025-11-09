@@ -13,7 +13,6 @@ import hero6 from "../assets/Hero6.png";
 import hero7 from "../assets/Hero7.png";
 import hero8 from "../assets/Hero8.png";
 import hero9 from "../assets/Hero9.png";
-import hero10 from "../assets/Hero10.png";
 import hero11 from "../assets/Hero11.png";
 import hero12 from "../assets/Hero12.png";
 import hero13 from "../assets/Hero13.png";
