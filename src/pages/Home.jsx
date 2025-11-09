@@ -8,7 +8,6 @@ import hero1 from "../assets/Hero1.png";
 import hero2 from "../assets/Hero2.png";
 import hero3 from "../assets/Hero3.png";
 import hero4 from "../assets/Hero4.png";
-import hero5 from "../assets/Hero5.png";
 import hero6 from "../assets/Hero6.png";
 import hero7 from "../assets/Hero7.png";
 import hero8 from "../assets/Hero8.png";
@@ -47,13 +46,6 @@ const HERO_IMAGES = [
     mobilePos: "0% 0%",
     zoom: 1.4,
     motion: "bt",   // right → left
-  },
-  {
-    src: hero5,
-    pos: "center 5%",
-    mobilePos: "80% 0%",
-    zoom: 1.2,
-    motion: "tb",   // bottom → top
   },
   {
     src: church,
