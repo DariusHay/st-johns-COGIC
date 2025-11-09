@@ -1,5 +1,5 @@
-import hero11 from "../assets/hero11.png";
-import hero12 from "../assets/hero12.png";
+import hero11 from "../assets/Hero11.png";
+import hero12 from "../assets/Hero12.png";
 
 export default function Leaders() {
   return (

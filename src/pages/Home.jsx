@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 import HeroSlideshow from "../components/HeroSlideshow";
 import logo from "../assets/church-logo.PNG"; // rename lowercase or use ?url
-import hero1 from "../assets/hero1.png";
-import hero2 from "../assets/hero2.png";
-import hero3 from "../assets/hero3.png";
-import hero4 from "../assets/hero4.png";
-import hero5 from "../assets/hero5.png";
-import hero6 from "../assets/hero6.png";
-import hero7 from "../assets/hero7.png";
-import hero8 from "../assets/hero8.png";
-import hero9 from "../assets/hero9.png";
-import hero10 from "../assets/hero10.png";
-import hero11 from "../assets/hero11.png";
-import hero12 from "../assets/hero12.png";
-import hero13 from "../assets/hero13.png";
-import hero14 from "../assets/hero14.png";
-import hero15 from "../assets/hero15.png";
+import hero1 from "../assets/Hero1.png";
+import hero2 from "../assets/Hero2.png";
+import hero3 from "../assets/Hero3.png";
+import hero4 from "../assets/Hero4.png";
+import hero5 from "../assets/Hero5.png";
+import hero6 from "../assets/Hero6.png";
+import hero7 from "../assets/Hero7.png";
+import hero8 from "../assets/Hero8.png";
+import hero9 from "../assets/Hero9.png";
+import hero10 from "../assets/Hero10.png";
+import hero11 from "../assets/Hero11.png";
+import hero12 from "../assets/Hero12.png";
+import hero13 from "../assets/Hero13.png";
+import hero14 from "../assets/Hero14.png";
+import hero15 from "../assets/Hero15.png";
 import church from "../assets/church.jpg";
 // Hero images (can be local or remote URLs)
 
