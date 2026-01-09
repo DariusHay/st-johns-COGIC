@@ -98,7 +98,7 @@ export default function Contact() {
         {/* RIGHT: church info */}
         <div>
           <p><strong>Address:</strong> 750 Bernard Street, Cocoa, FL 32922</p>
-          <p className="mt-2"><strong>Phone:</strong> (321) 636-0305</p>
+          <a className="mt-2" href="tel:3216360305"><strong>Phone:</strong> (321) 636-0305</a>
           <p className="mt-2">
             <strong>Email:</strong>{" "}
             <a className="underline" href="mailto:stjohncocoa@pm.me">stjohncocoa@pm.me</a>

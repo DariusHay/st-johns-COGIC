@@ -64,7 +64,7 @@ export default function Events() {
         <div className="mt-4 grid md:grid-cols-3 gap-6 items-start">
           {/* Flyer (replace src with your flyer image path when ready) */}
           {/* Flyer (clickable) */}
-          <div className="md:col-span-1">
+          {/* <div className="md:col-span-1">
             <div
               className="card overflow-hidden cursor-pointer hover:opacity-90 transition"
               onClick={() => setShowFlyer(true)}
@@ -80,22 +80,23 @@ export default function Events() {
                 Click to enlarge
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Details */}
           <div className="md:col-span-2">
             <div className="card">
               <div className="p-5">
-                <div className="h-eyebrow">Special Service</div>
-                <h3 className="font-bold text-2xl mt-1 text-sjBurgundy">Family &amp; Friends Day</h3>
-                <ul className="mt-3 space-y-2 text-slate-700">
+                {/* <div className="h-eyebrow">Special Service</div> */}
+                <h3 className="font-bold text-2xl mt-1 text-sjBurgundy">No Special Events at this time</h3>
+                {/* <ul className="mt-3 space-y-2 text-slate-700">
                   <li><strong>Date:</strong> Sunday, November 16, 2025</li>
                   <li><strong>Time:</strong> 3:00 PM</li>
                   <li><strong>Location:</strong> St. John COGIC — 750 Bernard Street, Cocoa, FL 32922</li>
-                </ul>
+                </ul> */}
                 <p className="mt-4 text-slate-700">
-                  We’d love to celebrate with you—bring your family and invite a friend!
+                  For more info on upcoming events, please contact the church office.
                 </p>
+                <a className="mt-2" href="tel:3216360305">(321) 636-0305</a>
               </div>
             </div>
           </div>
